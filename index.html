@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Robotic Monitoring of Colorimetric Leaf Sensors for Precision Agriculture</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 1em;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .button {
+      display: inline-block;
+      padding: 0.5em 1em;
+      margin: 0.5em;
+      border-radius: 5px;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+    }
+    .button:hover {
+      background-color: #555;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 1em;
+      overflow-x: auto;
+    }
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      margin: 1em 0;
+      flex-wrap: wrap;
+    }
+    .image-row img {
+      width: 30%;
+      min-width: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <div style="text-align: center;">
+    <h1>Robotic Monitoring of Colorimetric Leaf Sensors for Precision Agriculture</h1>
+
+    <h2>Authors</h2>
+    <p>
+      Malakhi Hopkins<sup>1</sup>, Alice Li<sup>1</sup>, Shobhita Kramadhati<sup>1</sup>, Jackson Arnold<sup>2</sup>, Akhila Mallavarapu<sup>1</sup>, Chavez F.K. Lawrence<sup>1</sup>, Varun Murali<sup>1</sup>, Sanjeev J Koppal<sup>2,3</sup>, Cherie R Kagan<sup>1</sup>, Vijay Kumar<sup>1</sup><br>
+      <sup>1</sup>GRASP Laboratory, University of Pennsylvania, Pennsylvania, USA&nbsp;&nbsp;
+      <sup>2</sup>University of Florida, Florida, USA&nbsp;&nbsp;
+      <sup>3</sup>Amazon Robotics. Sanjeev J. Koppal holds concurrent appointments as an Associate Professor of ECE at the University of Florida and as an Amazon Scholar at Amazon Robotics. This paper describes work performed at the University of Florida and is not associated with Amazon.
+    </p>
+
+    <a href="https://arxiv.org/abs/2505.13916" class="button" target="_blank">View on arXiv</a>
+    <a href="https://www.youtube.com/watch?v=as0ajkxPV5E" class="button" target="_blank">Watch Video</a>
+  </div>
+
+  <h2>Abstract</h2>
+  <p>
+    Common remote sensing modalities (RGB, multi-spectral, hyperspectral imaging or LiDAR) are often used to indirectly measure crop health and do not directly capture plant stress indicators. Commercially available direct leaf sensors are bulky, powered electronics that are expensive and interfere with crop growth. In contrast, low-cost, passive and bio-degradable leaf sensors offer an opportunity to advance real-time monitoring as they directly interface with the crop surface while not interfering with crop growth. To this end, we co-design a sensor-detector system, where the sensor is a passive colorimetric leaf sensor that directly measures crop health in a precision agriculture setting, and the detector autonomously obtains optical signals from these leaf sensors. The detector comprises a low size weight and power (SWaP) mobile ground robot with an onboard monocular RGB camera and object detector to localize each leaf sensor, as well as a hyperspectral camera with a motorized mirror and halogen light to acquire hyperspectral images. The sensor’s crop health-dependent optical signals can be extracted from the hyperspectral images. The proof-of-concept system is demonstrated in row-crop environments both indoors and outdoors where it is able to autonomously navigate, locate and obtain a hyperspectral image of all leaf sensors present, and acquire interpretable spectral resonance with 80% accuracy within a required retrieval distance from the sensor.
+  </p>
+
+  <h2>System Pipeline</h2>
+  <div class="image-row">
+    <img src="sensor.jpg" alt="Leaf Sensor">
+    <img src="beast.jpg" alt="Robot">
+    <img src="HyperspectralCamera.png" alt="Hyperspectral Camera">
+  </div>
+  <img src="pipeline.png" alt="System Pipeline Diagram">
+  <p>
+    The proposed system consists of three key components. First, a colorimetric leaf sensor, capable of producing a measurable spectral resonance, is affixed directly to the surface of a plant. Second, a ground robot autonomously navigates through the row-crop environment, using an onboard RGB camera and object detector to locate the sensor. Finally, an onboard hyperspectral imaging system, integrating a motorized mirror and halogen illumination, captures detailed spectral data at the sensor’s location, enabling accurate retrieval of the sensor’s optical signature.
+  </p>
+
+  <h2>Experimental Settings</h2>
+  <div class="image-row">
+    <img src="exp_1.jpeg" alt="Indoor Structured">
+    <img src="exp_2.jpg" alt="Outdoor Unstructured">
+    <img src="exp_3.jpg" alt="Outdoor Structured">
+  </div>
+  <p>
+    Experiments were conducted across three distinct environments: a structured indoor environment, an unstructured outdoor environment, and a structured outdoor environment.
+  </p>
+
+  <h2>Leaf Sensor Detection</h2>
+  <img src="yolo_detections_tile_abcd_color_altered.png" alt="Sensor Detection Example">
+  <p>
+    An object detector was trained to reliably identify the colorimetric leaf sensors across all experimental environments.
+  </p>
+
+  <h2>Leaf Sensor Resonance Acquisition</h2>
+  <div class="image-row">
+    <img src="Sensor_OutdoorCharacterization1.png" alt="Peak Expectation" style="width:480px; display:block; margin:1em auto;">
+  </div>
+    Using our hyperspectral imaging system, we captured the distinct spectral resonance emitted by the leaf sensor, corresponding to the peak wavelengths shown in the image above.
+  </p>
+
+  <h2>BibTeX</h2>
+  <pre><code>@misc{hopkins2025roboticmonitoringcolorimetricleaf,
+    title={Robotic Monitoring of Colorimetric Leaf Sensors for Precision Agriculture}, 
+    author={Malakhi Hopkins and Alice Kate Li and Shobhita Kramadhati and Jackson Arnold and Akhila Mallavarapu and Chavez Lawrence and Varun Murali and Sanjeev J. Koppal and Cherie Kagan and Vijay Kumar},
+    year={2025},
+    eprint={2505.13916},
+    archivePrefix={arXiv},
+    primaryClass={cs.RO},
+    url={https://arxiv.org/abs/2505.13916}, 
+}</code></pre>
+
+</body>
+</html>
