@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Robotic Monitoring of Colorimetric Leaf Sensors for Precision Agriculture</title>
+  <title>Real-Time Glass Detection and Reprojection using Sensor Fusion on Aerial Robots</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
@@ -52,14 +52,13 @@
 <body>
 
   <div style="text-align: center;">
-    <h1>Robotic Monitoring of Colorimetric Leaf Sensors for Precision Agriculture</h1>
+    <h1>Real-Time Glass Detection and Reprojection using Sensor Fusion on Aerial Robots</h1>
 
     <h2>Authors</h2>
     <p>
-      Malakhi Hopkins<sup>1</sup>, Alice Li<sup>1</sup>, Shobhita Kramadhati<sup>1</sup>, Jackson Arnold<sup>2</sup>, Akhila Mallavarapu<sup>1</sup>, Chavez F.K. Lawrence<sup>1</sup>, Varun Murali<sup>1</sup>, Sanjeev J Koppal<sup>2,3</sup>, Cherie R Kagan<sup>1</sup>, Vijay Kumar<sup>1</sup><br>
+      Malakhi Hopkins<sup>1</sup>, Varun Murali<sup>2</sup>, Vijay Kumar<sup>1</sup>, Camillo J Taylor<sup>1</sup><br>
       <sup>1</sup>GRASP Laboratory, University of Pennsylvania, Pennsylvania, USA&nbsp;&nbsp;
-      <sup>2</sup>University of Florida, Florida, USA&nbsp;&nbsp;
-      <sup>3</sup>Amazon Robotics. Sanjeev J. Koppal holds concurrent appointments as an Associate Professor of ECE at the University of Florida and as an Amazon Scholar at Amazon Robotics. This paper describes work performed at the University of Florida and is not associated with Amazon.
+      <sup>2</sup>Texas A&M University, Texas, USA&nbsp;&nbsp;
     </p>
 
     <a href="https://arxiv.org/abs/2505.13916" class="button" target="_blank">View on arXiv</a>
@@ -68,7 +67,7 @@
 
   <h2>Abstract</h2>
   <p>
-    Common remote sensing modalities (RGB, multi-spectral, hyperspectral imaging or LiDAR) are often used to indirectly measure crop health and do not directly capture plant stress indicators. Commercially available direct leaf sensors are bulky, powered electronics that are expensive and interfere with crop growth. In contrast, low-cost, passive and bio-degradable leaf sensors offer an opportunity to advance real-time monitoring as they directly interface with the crop surface while not interfering with crop growth. To this end, we co-design a sensor-detector system, where the sensor is a passive colorimetric leaf sensor that directly measures crop health in a precision agriculture setting, and the detector autonomously obtains optical signals from these leaf sensors. The detector comprises a low size weight and power (SWaP) mobile ground robot with an onboard monocular RGB camera and object detector to localize each leaf sensor, as well as a hyperspectral camera with a motorized mirror and halogen light to acquire hyperspectral images. The sensor’s crop health-dependent optical signals can be extracted from the hyperspectral images. The proof-of-concept system is demonstrated in row-crop environments both indoors and outdoors where it is able to autonomously navigate, locate and obtain a hyperspectral image of all leaf sensors present, and acquire interpretable spectral resonance with 80% accuracy within a required retrieval distance from the sensor.
+    Autonomous aerial robots are increasingly being deployed in real-world scenarios, where transparent obstacles present significant challenges to reliable navigation and mapping. These materials pose a unique problem for traditional perception systems because they lack discernible features and can cause conventional depth sensors to fail, leading to inaccurate maps and potential collisions. To ensure safe navigation, robots must be able to accurately detect and map these transparent obstacles. Existing methods often rely on large, expensive sensors or algorithms that impose high computational burdens, making them unsuitable for low Size, Weight, and Power (SWaP) robots. In this work, we propose a novel and computationally efficient framework for detecting and mapping transparent obstacles onboard a sub-300g quadrotor. Our method fuses data from a Time-of-Flight (ToF) camera and an ultrasonic sensor with a custom, lightweight 2D convolution model. This specialized approach accurately detects specular reflections and propagates their depth into corresponding empty regions of the depth map, effectively rendering transparent obstacles visible. The entire pipeline operates in real-time, utilizing only a small fraction of a CPU core on an embedded processor. We validate our system through a series of experiments in both controlled and real-world environments, demonstrating the utility of our method through experiments where the robot maps indoor environments containing glass. Our work is, to our knowledge, the first of its kind to demonstrate a real-time, onboard transparent obstacle mapping system on a low-SWaP quadrotor using only the CPU.
   </p>
 
   <h2>System Pipeline</h2>
@@ -106,14 +105,7 @@
   </p>
 
   <h2>BibTeX</h2>
-  <pre><code>@misc{hopkins2025roboticmonitoringcolorimetricleaf,
-    title={Robotic Monitoring of Colorimetric Leaf Sensors for Precision Agriculture}, 
-    author={Malakhi Hopkins and Alice Kate Li and Shobhita Kramadhati and Jackson Arnold and Akhila Mallavarapu and Chavez Lawrence and Varun Murali and Sanjeev J. Koppal and Cherie Kagan and Vijay Kumar},
-    year={2025},
-    eprint={2505.13916},
-    archivePrefix={arXiv},
-    primaryClass={cs.RO},
-    url={https://arxiv.org/abs/2505.13916}, 
+  <pre><code>X, 
 }</code></pre>
 
 </body>
