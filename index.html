@@ -82,6 +82,12 @@
     The proposed four-component system first filters the depth image based on the sonar measurement. This filtered image is simultaneously passed to the Speckle Detection algorithm (which provides 3D coordinates and normal distance) and the Depth Segmentation algorithm (which bounds potential glass regions). Finally, the outputs are fused in the Transparent Plane Detection algorithm, which fills the empty space with the speckle's depth and tilts the plane by the estimated normal angle.
   </p>
 
+  <h2>Results: Comparison to Existing Methods</h2>
+  <img src="ResultsComparison.jpg" alt="Results Comparison">
+  <p>
+    We evaluate our algorithm against the existing learning algorithms GDNet and GlassSemNet. In our single glass pane detection and segmentation, head-on experiments we accomplish superior metrics in all 3 categories, and in our angled (5 degrees) experiments achieve superior precision and mIOU. Our algorithm also acheives vastly superior processing rate and CPU usage.
+  </p>
+
   <h2>BibTeX</h2>
   <pre><code>X, 
 }</code></pre>
